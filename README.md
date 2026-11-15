@@ -1,4 +1,4 @@
-# MangaForge Frontend
+# MangaForge
 
 MangaForge is a browser-based manga creation platform for writers, artists, and creative teams who want to turn an idea into a structured comic or manga project without juggling multiple tools. The frontend gives users a polished workflow for planning a series, generating character concepts, building storyboards, and editing manga pages with AI-assisted creative tools.
 
