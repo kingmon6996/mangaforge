@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Dela Gothic One", "M PLUS 1p", ui-sans-serif, system-ui, sans-serif;
+  --font-comic: "Bangers", "Dela Gothic One", ui-sans-serif, system-ui, sans-serif;
+  --font-dialogue: "Comic Neue", "M PLUS 1p", ui-sans-serif, sans-serif;
+  --font-sans: "M PLUS 1p", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-paper: #FAF9F6;
+  --color-paper-secondary: #F1EFEA;
+  --color-paper-muted: #EAE7E0;
+  --color-ink: #171717;
+  --color-ink-muted: #737373;
+  --color-ink-border: #222222;
+  --color-vermilion: #E63946;
+  --color-amber-gold: #FFB703;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #FAF9F6;
+    color: #171717;
+    overflow-x: clip;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  h3, h4, .font-editorial {
+    font-family: var(--font-sans);
+    font-weight: 800;
+  }
+
+  .font-comic {
+    font-family: var(--font-comic);
+    letter-spacing: 0.04em;
+  }
+
+  .font-dialogue {
+    font-family: var(--font-dialogue);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Manga Paper Grain & Halftone Screentone Textures */
+.manga-halftone {
+  background-image: radial-gradient(#222222 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.manga-halftone-subtle {
+  background-image: radial-gradient(rgba(34, 34, 34, 0.14) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+.manga-halftone-dense {
+  background-image: radial-gradient(rgba(34, 34, 34, 0.22) 1.2px, transparent 1.2px);
+  background-size: 6px 6px;
+}
+
+.manga-paper-grid {
+  background-image:
+    linear-gradient(to right, rgba(34, 34, 34, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 34, 34, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.manga-panel-shadow {
+  box-shadow: 4px 4px 0px #222222;
+}
+
+.manga-panel-shadow-sm {
+  box-shadow: 2px 2px 0px #222222;
+}
+
+.manga-panel-shadow-red {
+  box-shadow: 4px 4px 0px #E63946;
+}
+
+/* Smooth Manga Cartoon Tactile Button Behavior */
+.manga-cartoon-btn {
+  transition:
+    transform 190ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 190ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.manga-cartoon-btn:hover:not(:disabled) {
+  transform: translate(-2px, -3px) rotate(-0.4deg);
+  box-shadow: 6px 6px 0px #222222;
+}
+
+.manga-cartoon-btn:active:not(:disabled) {
+  transform: translate(3px, 3px) scale(0.97);
+  box-shadow: 0px 0px 0px #222222;
+}
+
+.manga-card-interactive {
+  transition:
+    transform 240ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 240ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.manga-card-interactive:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px #222222;
+}
+
+/* Custom scrollbar for studio workspace */
+.studio-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.studio-scroll::-webkit-scrollbar-track {
+  background: #F1EFEA;
+}
+.studio-scroll::-webkit-scrollbar-thumb {
+  background: #BDB8AE;
+}
+.studio-scroll::-webkit-scrollbar-thumb:hover {
+  background: #222222;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

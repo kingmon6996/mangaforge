@@ -1,0 +1,6 @@
+{
+  "name": "MangaForge",
+  "description": "Professional AI manga creation studio for storyboarding, character consistency, panel composition, and multi-format publishing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
